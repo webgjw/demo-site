@@ -1,30 +1,20 @@
 <script setup>
-const showMsg = () => {
-  ElMessageBox.alert('你好！')
-}
+import zhCn from 'element-plus/es/locale/lang/zh-cn'
 </script>
 
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </div>
-  <el-button type="primary" @click="showMsg">按钮</el-button>
-  <hr>
-  <el-icon :size="36">
-    <Edit />
-  </el-icon>
-  <hr>
-  <router-view></router-view>
+  <el-config-provider :locale="zhCn">
+    <router-view></router-view>
+  </el-config-provider>
 </template>
 
 <style>
+html,
+body {
+  height: 100%;
+}
 #app {
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  height: 100%;
+  overflow: hidden;
 }
 </style>
