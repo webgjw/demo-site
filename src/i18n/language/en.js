@@ -3,6 +3,8 @@ export default {
     personalCenter: 'Percenal Center',
     logout: 'Exit',
     login: 'Login',
+    tips404: 'Sorry, page Not Found!',
+    backHome: 'Back to HomePage',
     form: {
         username: 'Username',
         usernameHolder: 'Please enter your username.',
@@ -10,5 +12,19 @@ export default {
         password: 'Password',
         passwordHolder: 'Please enter your password.',
         passwordError: 'Please enter a password of at lease 4 characters'
+    },
+    menu: {
+        App: 'Website',
+        AppUser: 'User',
+        AppDept: 'Department',
+        AppRole: 'Role',
+        AppResource: 'Resource',
+        AppPermission: 'Permission',
+        Sys: 'System',
+        SysUser: 'User',
+        SysNotice: 'Notice',
+        Logs: 'Logs',
+        LogsVisit: 'Visits',
+        LogsOperation: 'Operations'
     }
 }

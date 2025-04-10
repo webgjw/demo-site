@@ -7,3 +7,11 @@ export const userInfo = (data) => {
         data
     })
 }
+
+export const menuTree = (data) => {
+    return request({
+        url: 'personal/menuTree',
+        method: 'get',
+        data,
+    });
+};

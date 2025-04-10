@@ -16,7 +16,7 @@
 
 <script setup>
 import PageHeader from './components/PageHeader.vue'
-import PageSiderbar from './components/PageSiderbar.vue'
+import PageSidebar from './components/PageSidebar.vue'
 const route = useRoute()
 const showLeft = computed(() => {
     const routeName = route.name
