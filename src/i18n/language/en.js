@@ -3,6 +3,8 @@ export default {
     personalCenter: "Percenal Center",
     logout: "Exit",
     login: "Login",
+    tips404: 'Sorry, page Not Found!',
+    backHome: 'Back to HomePage',
     form: {
         username: 'Username',
         usernameHolder: 'Please enter your username.',

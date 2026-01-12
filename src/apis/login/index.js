@@ -8,3 +8,11 @@ export const login = (data) => {
         data
     });
 };
+
+// 登出
+export const logout = () => {
+    return request({
+        url: 'logout',
+        method: 'get',
+    });
+};

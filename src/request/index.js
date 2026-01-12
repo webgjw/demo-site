@@ -36,6 +36,7 @@ export default function request(options) {
         // response 响应拦截器
         instance.interceptors.response.use(
             (response) => {
+                console.log(response);
                 return response.data;
             },
             (err) => {
@@ -87,6 +88,7 @@ export default function request(options) {
         // 请求处理
         instance(options)
             .then((res) => {
+                console.log(res);
                 if (res.code === 200) {
                     resolve(res);
                 } else {

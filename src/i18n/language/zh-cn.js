@@ -3,6 +3,8 @@ export default {
     personalCenter: "个人中心",
     logout: "退出",
     login: "登录",
+    tips404: '对不起！页面找不到了...',
+    backHome: '返回首页',
     form: {
         username: '用户名',
         usernameHolder: '请输入用户名',
