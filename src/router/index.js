@@ -6,6 +6,7 @@ const routes = [
         path: '/',
         name: 'Home',
         component: Layout,
+        redirect: '/app/user',
         children: [
             {
                 path: 'login',
@@ -41,7 +42,93 @@ const routes = [
                 meta: {
                     requireAuth: true
                 },
-                component: () => import("@/views/app/index.vue")
+                component: () => import("@/views/app/index.vue"),
+                children: [
+                    {
+                        path: 'user',
+                        name: "AppUser",
+                        meta: {
+                            requireAuth: true
+                        },
+                        component: () => import("@/views/app/User.vue")
+                    },
+                    {
+                        path: 'dept',
+                        name: "AppDept",
+                        meta: {
+                            requireAuth: true
+                        },
+                        component: () => import("@/views/app/Dept.vue")
+                    },
+                    {
+                        path: 'role',
+                        name: "AppRole",
+                        meta: {
+                            requireAuth: true
+                        },
+                        component: () => import("@/views/app/Role.vue")
+                    },
+                    {
+                        path: 'resource',
+                        name: "AppResource",
+                        meta: {
+                            requireAuth: true
+                        },
+                        component: () => import("@/views/app/Resource.vue")
+                    }
+                ]
+            },
+            {
+                path: "sys",
+                name: "Sys",
+                meta: {
+                    requireAuth: true
+                },
+                component: () => import("@/views/sys/index.vue"),
+                children: [
+                    {
+                        path: 'user',
+                        name: "SysUser",
+                        meta: {
+                            requireAuth: true
+                        },
+                        component: () => import("@/views/sys/User.vue")
+                    },
+                    {
+                        path: 'notice',
+                        name: "SysNotice",
+                        meta: {
+                            requireAuth: true
+                        },
+                        component: () => import("@/views/sys/Notice.vue")
+                    }
+                ]
+            },
+            {
+                path: "logs",
+                name: "Logs",
+                meta: {
+                    requireAuth: true
+                },
+                component: () => import("@/views/logs/index.vue"),
+                children: [
+                    {
+                        path: 'visit',
+                        name: "LogsVisit",
+                        meta: {
+                            requireAuth: true
+                        },
+                        component: () => import("@/views/logs/Visit.vue")
+                    },
+                    {
+                        path: 'operation',
+                        name: "LogsOperation",
+                        meta: {
+                            requireAuth: true
+                        },
+                        component: () => import("@/views/logs/Operation.vue")
+                    }
+                ]
             }
         ]
     },

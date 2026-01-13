@@ -38,8 +38,8 @@ const router = useRouter();
 const { t } = useI18n();
 const formRef = ref();
 const form = reactive({
-    account: "",
-    password: ""
+    account: "admin",
+    password: "admin"
 });
 const rules = computed(() => {
     return {
