@@ -39,7 +39,7 @@ export function menuTree() {
             const name = token.split('@')[0];
             const info = users.find((v) => v.name === name);
             const role = info.roleId;
-            let treeData = [menuTreeData[2]]; // 默认Logs模块
+            let treeData = [menuTreeData[2]]; // 默认Log模块
             switch (role) {
                 case 'admin':
                     treeData = menuTreeData;

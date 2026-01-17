@@ -98,7 +98,6 @@ function addDynamic() {
 }
 // 动态引入views下所有.vue文件（组件）
 const modules = import.meta.glob('../views/**/*.vue');
-console.log(modules);
 function addDynamicRoutes(data, parent) {
     data.forEach((item, i) => {
         const route = {
@@ -119,7 +118,6 @@ function addDynamicRoutes(data, parent) {
                 }).join('/');
                 route.path = compParr[l];
                 // 设置动态组件
-                console.log(`../views/${compPath}`);
                 route.component = modules[`../views/${compPath}`];
                 parent.children.push(route);
             }
