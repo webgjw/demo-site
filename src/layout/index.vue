@@ -8,7 +8,7 @@
             <page-sidebar></page-sidebar>
         </div>
         <div class="right">
-            <router-view></router-view>
+            <page-frame></page-frame>
         </div>
     </main>
 </div>
@@ -17,6 +17,7 @@
 <script setup>
 import PageHeader from './components/PageHeader.vue'
 import PageSidebar from './components/PageSiderbar.vue'
+import PageFrame from './components/PageFrame.vue'
 const route = useRoute()
 const showLeft = computed(() => {
     const routeName = route.name;

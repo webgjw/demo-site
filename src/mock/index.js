@@ -25,7 +25,6 @@ function mockAll(modules, isOpen = true) {
  * @param {*} isOpen 是否开启?
 */
 function mock(mod, isOpen = true) {
-    console.log(new Date());
     if (isOpen) {
         for (var key in mod) {
             ((res) => {

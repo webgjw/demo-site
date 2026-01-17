@@ -70,10 +70,9 @@ function doLogin() {
         if (!valid) return;
         loading.value = true;
         login(form).then((res) => {
-            console.log(res);
             store.commit('user/setToken', res.data.token);
             store.dispatch('user/refreshInfo');
-            // store.commit('setRouteLoaded', false);
+            store.commit('setRouteLoaded', false);
             // localStorage.setItem('pm_token', res.data.token);
             router.push('/');
         }).finally(() => {

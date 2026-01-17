@@ -28,12 +28,13 @@
 </template>
 
 <script setup>
-import { menuTreeData } from '@/mock/data';
+// import { menuTreeData } from '@/mock/data';
 const route = useRoute();
 const store = useStore();
 const { t } = useI18n();
-const treeData = menuTreeData;
-const defaultActive = computed(() => {return route.path === '/'? treeData[0].children[0].path : route.path});
+// const treeData = menuTreeData;
+const treeData = computed(() => store.state.menuTree);
+const defaultActive = computed(() => route.path || treeData.value[0].path);
 const isCollapse = ref(false);
 </script>
 
